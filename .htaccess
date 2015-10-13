@@ -1,0 +1,11 @@
+#Block all except bitbucket and github. Also your own for testing
+order deny,allow
+deny from all
+#local ip for you own
+allow from 127.0.0.1
+#bitbucket ips
+allow from 131.103.20.160/27
+allow from 165.254.145.0/26
+allow from 104.192.143.0/24
+#github ips
+allow from 192.30.252.0/22
