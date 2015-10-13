@@ -19,7 +19,7 @@ require('vendor/autoload.php');
 $secretKey = '';
 
 // Path of the log files, make sure it is writeble by the server
-$logPath = __DIR__.'/log';
+$logPath = __DIR__.'/logs';
 
 // Define you project config, each array is a project in itself, you can have more than 1 project per webhook
 // projectName: need to be the exact name no space of the bitbucket project
