@@ -27,7 +27,7 @@ $logPath = __DIR__.'/log';
 // workLocalDirectory: where to deploy the project on the web, usually a web folder
 // repoRemote: this is the username/repo-name same as in bitbucket
 // branch: the branch to checkout and deploy
-// source: future user to do diffirent method if bitbucket or github
+// source: need to tell the repo source, git clone and fetch will depend on this.
 $projectsConfig = array(
         array(
             'projectName' => 'projectname',
