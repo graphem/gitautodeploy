@@ -23,12 +23,12 @@ class Listener
         $this->logPath = $logPath;
         $this->secretKey = $secretKey;
         $this->log = new Logger('Payload Listener');
+        $this->setFolder($this->logPath);
         $this->log->pushHandler(new StreamHandler($this->logPath.'/deploy.log', Logger::WARNING));
     }
 
     public function listen()
     {
-        //var_dump($this->projects);
         if (!$this->verifyKey() || !$this->getPayload()) {
             die();
         }
@@ -37,8 +37,22 @@ class Listener
 
     /**
      *
+     * Verify if folder exist and create if needed
+     * @return null
+     */
+
+    public function setFolder($dir)
+    {
+        if ( is_dir($dir) ) {
+            return true;
+        }
+        mkdir($dir);
+    }
+
+    /**
+     *
      * Hash the project with a key so that they are easy to index when comparing
-     * 
+     * @return null
      */
     
 
