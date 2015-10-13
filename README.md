@@ -18,7 +18,6 @@ You must install this tool through Composer to get the dependencies:
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
 
-# Require php-opencloud as a dependency
 php composer.phar install
 ```
 
