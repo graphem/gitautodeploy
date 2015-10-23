@@ -92,8 +92,8 @@ class Listener
     protected function getPayload()
     {
         $data = file_get_contents('php://input');
-
-        $this->log->addWarning('Payload: '.print_r($data,true));
+        //Print playload
+        //$this->log->addWarning('Payload: '.print_r($data,true));
         if (empty($data)) {
             $this->log->addWarning('No payload found');
             return false;
